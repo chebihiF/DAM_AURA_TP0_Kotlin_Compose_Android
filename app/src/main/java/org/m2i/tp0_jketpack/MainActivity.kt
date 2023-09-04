@@ -42,16 +42,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TP0_JKetpackTheme {
-                // A surface container using the 'background' color from the theme
-                Surface( // DIV
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Column {
-                        Greeting("Android")
-                        ShowAge(20)
-                    }
-                }
+                GreetingPreview()
             }
         }
     }
@@ -76,6 +67,7 @@ fun GreetingPreview() {
     var moneyCounter by remember {
         mutableStateOf(0)
     }
+
     TP0_JKetpackTheme {
         Surface( // DIV
             modifier = Modifier.fillMaxSize(), // MAX(W,H)
